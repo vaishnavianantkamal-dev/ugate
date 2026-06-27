@@ -83,7 +83,7 @@ const VideoStatsSection = () => {
                     }}
                 >
                     <video 
-                        src="/images/Website_Purpose_What_is_Urban.mp4" 
+                        src="https://cdn.jsdelivr.net/gh/vaishnavianantkamal-dev/ugate@main/public/images/Website_Purpose_What_is_Urban.mp4" 
                         autoPlay
                         loop
                         muted

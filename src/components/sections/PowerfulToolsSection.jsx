@@ -137,8 +137,10 @@ const PowerfulToolsSection = () => {
                                 textTransform: "uppercase"
                             }}
                         >
-                            Powerful Tools <br />
-                            <span style={{ color: "transparent", WebkitTextStroke: "1.5px rgba(255,255,255,0.5)" }}>
+                            <span style={{ color: "#ffffff" }}>
+                                Powerful Tools
+                            </span> <br />
+                            <span style={{ color: "#ffffff" }}>
                                 For Every Society
                             </span>
                         </motion.h2>

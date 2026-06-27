@@ -73,7 +73,7 @@ const HeroSection = () => {
                     <div className="hero-visual-wrapper">
                         <div className="hero-video-inner">
                             <video 
-                                src="/images/Prompt_A_cinematic_high_end.mp4" 
+                                src="https://cdn.jsdelivr.net/gh/vaishnavianantkamal-dev/ugate@main/public/images/Prompt_A_cinematic_high_end.mp4" 
                                 className="hero-building"
                                 autoPlay 
                                 loop 

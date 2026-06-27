@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { useEffect, useState } from "react";
+import Lenis from 'lenis';
 import { pricingData } from "./data/Pricingdata";
 import { residentData } from "./data/residentData";
 import Resident from "./pages/Resident";
@@ -42,6 +43,31 @@ const AnimatedRoutes = () => {
 
 function App() {
   const [showBlockNotice, setShowBlockNotice] = useState(false);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     const shouldBlock = import.meta.env.VITE_DISABLE_DEVTOOLS === "true";
